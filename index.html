@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Trial Sender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="logo">NETFLIX <span>TRIAL SENDER</span></div>
+    <p class="by">by Lyco</p>
+
+    <div class="status" id="status">
+      <span class="dot" id="dot"></span>
+      <span id="statusText">Ready</span>
+    </div>
+
+    <label class="field">
+      <span>Email address</span>
+      <input id="email" type="email" placeholder="you@example.com" autocomplete="off" spellcheck="false" />
+    </label>
+
+    <button id="start">Start</button>
+
+    <p class="privacy">&#128274; Email never saved &middot; only a 30-day trial is sent &middot; re-checks automatically</p>
+
+    <div id="log" class="log" aria-live="polite"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
