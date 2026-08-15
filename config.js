@@ -1,13 +1,18 @@
 // ============================================================
 //  Backend API base URL
 // ============================================================
-//  Keep this as "" when the UI and the engine run on the SAME
-//  machine (local mode: python server.py + http://127.0.0.1:8000).
+//  The UI (Vercel) and the engine (Render) live on DIFFERENT
+//  domains, so this MUST be the public URL of the Render backend.
 //
-//  When you deploy this UI to Vercel, point it at your public
-//  engine URL (Cloudflare Tunnel / ngrok), for example:
+//  This is the live Render backend URL:
 //
-//     window.API_BASE = "https://your-name.trycloudflare.com";
+//     window.API_BASE = "https://ahabon.onrender.com";
 //
+//  (no trailing slash — the page appends /api/run itself)
+//
+//  Local mode only (python server.py on your PC + opening
+//  http://127.0.0.1:8000 yourself) can keep this as "".
+//  If you deploy the UI to Vercel and leave it empty, the
+//  browser asks Vercel for /api/run -> HTTP 404 (what you saw).
 // ============================================================
-window.API_BASE = "";
+window.API_BASE = "https://ahabon.onrender.com";
